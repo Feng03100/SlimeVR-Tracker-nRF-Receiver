@@ -35,10 +35,9 @@
 
 	nrf_radio_fem: nrf21540_fem {
 		compatible = "nordic,nrf21540-fem";
-		tx-en-gpios = <&gpio1 0 GPIO_ACTIVE_HIGH>;   /* 原本 CTX → TX_EN */
-		rx-en-gpios = <&gpio0 11 GPIO_ACTIVE_HIGH>;  /* 原本 CRX → RX_EN */
-		/* PDN 硬體固定拉高，省略 pdn-gpios */
-		supply-voltage-mv = <3000>;
+		tx-en-gpios = <&gpio1 0 GPIO_ACTIVE_HIGH>;
+		rx-en-gpios = <&gpio0 11 GPIO_ACTIVE_HIGH>;
+		/* PDN is hard-wired high, omit pdn-gpios */
 	};
 
 	pwmleds {
