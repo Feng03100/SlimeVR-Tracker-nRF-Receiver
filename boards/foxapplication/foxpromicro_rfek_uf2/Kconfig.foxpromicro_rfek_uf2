@@ -14,7 +14,6 @@ config BOARD_ENABLE_FEM
 	bool "FEM enabled"
 	default y
 	select MPSL_FEM
-	select MPSL_FEM_NRF21540_GPIO
 	help
 	  Enable front-end module (nRF21540).
 
